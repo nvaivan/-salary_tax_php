@@ -1,0 +1,5 @@
+Name Old Kids CompanyCar Salary
+Alice 26 2 0 $6000 
+Bob 52 0 1 $4000
+Charlie 36 3 1 $5000 
+Charlie 36 3 1 $3000 
