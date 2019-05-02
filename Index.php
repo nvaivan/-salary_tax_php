@@ -8,9 +8,16 @@ const CAR_TAX = 500;
 
 
 function read_file(){
-    $read = file('input.txt');
+    $filename = 'input.txt';
+
+    if (!file_exists($filename)) {
+        echo "The file $filename does not exist";
+        exit;
+    } 
+
+    $read = file($filename);
     $i = 0;
-    
+    $arr = [];
     foreach ($read as $line) {
         if ($i >= 1){
             $arr[] = explode(" ",$line);
@@ -19,12 +26,19 @@ function read_file(){
     }
     return $arr;
 }
+
 $arr = read_file();
+if(is_array($arr )){
+    $emp = new Employees();
+    $listEmp = $emp->getList($arr);
 
-$emp = new Employees();
-$listEmp = $emp->getList($arr);
+    $tax = new TaxCalculator();
+    $tax->output($listEmp, count($arr));
+}
+else {
+    echo "Data is wrong";
+    exit;
+}
 
-$tax = new TaxCalculator();
-$tax->output($listEmp, count($arr));
 
 ?> 
