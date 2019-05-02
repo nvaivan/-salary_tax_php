@@ -22,8 +22,11 @@ The interfaces are provided so you can keep working with your domain objects ins
 Store all class and counting function.
 ### Install
 Just Clone code, copy and run with folder you store if you run in local.
+
 With server just copy source code to server and run index.php
+
 Example: With XAMPP: Clone and copy code to "xampp\htdocs\salarytax"
+
 Run: http://localhost/salarytax/
 
 ### To test
